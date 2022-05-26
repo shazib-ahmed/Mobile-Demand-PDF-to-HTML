@@ -1,229 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile-pos-family-page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/css/bootstrap-grid.min.css" integrity="sha512-QWjMsIpO5eW4+c4ASTEaZ4+eZNZ4YTtSDiu167Rq1Eqw//WlO+rXo4OvZMpyW/ykbN5LFeXmN6N416OzmWo7fA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/js/bootstrap.min.js" integrity="sha512-Hqe3s+yLpqaBbXM6VA0cnj/T56ii5YjNrMT9v+us11Q81L0wzUG0jEMNECtugqNu2Uq5MSttCg0p4KK0kCPVaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/css/bootstrap-grid.min.css"
+        integrity="sha512-QWjMsIpO5eW4+c4ASTEaZ4+eZNZ4YTtSDiu167Rq1Eqw//WlO+rXo4OvZMpyW/ykbN5LFeXmN6N416OzmWo7fA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
+        integrity="sha512-X/RSQYxFb/tvuz6aNRTfKXDnQzmnzoawgEQ4X8nZNftzs8KFFH23p/BA6D2k0QCM4R0sY1DEy9MIY9b3fwi+bg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/js/bootstrap.min.js"
+        integrity="sha512-Hqe3s+yLpqaBbXM6VA0cnj/T56ii5YjNrMT9v+us11Q81L0wzUG0jEMNECtugqNu2Uq5MSttCg0p4KK0kCPVaQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"
+        integrity="sha512-9CWGXFSJ+/X0LWzSRCZFsOPhSfm6jbnL+Mpqo0o8Ke2SYr8rCTqb4/wGm+9n13HtDE1NQpAEOrMecDZw4FXQGg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <!-- <link rel="stylesheet" href="style.css"> -->
 
     <style>
+        /* Initial */
+        :root {
+            --primary: #FF9600;
+            --secondary: rgba(232, 228, 228, 0.850);
+            /* --secondary:rgba(232, 227, 227, 0.867); */
+            --assist: #626262;
+            --white: #ffffff;
+            --black: #000000;
+            --text: #626266;
+            --blue: #4676B2;
+        }
+
+        * {
+            box-sizing: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-size: 14px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .section-header {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            align-items: center;
+            justify-content: center;
+            margin-top: 35px;
+            font-weight: 300;
+            font-size: 25px;
+            color: var(--primary);
+        }
+
+        .section-sub {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            font-weight: 300;
+            font-size: 20px;
+            color: var(--text);
+        }
+
+        .back-drop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #0009;
+            z-index: 2;
+            display: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .res-nav-close {
+            position: fixed;
+            top: 10px;
+            left: -100px;
+            width: fit-content;
+            height: fit-content;
+            z-index: 3;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .res-nav-close i {
+            color: var(--primary);
+            font-size: 20px;
+        }
 
         /* Initial */
-        :root{
-                --primary:#FF9600;
-                --secondary:rgba(232, 228, 228, 0.850);
-                /* --secondary:rgba(232, 227, 227, 0.867); */
-                --assist:#626262;
-                --white:#ffffff;
-                --black:#000000;
-                --text:#626266;
-                --blue: #4676B2;
-            }
-
-            *{
-                box-sizing: 0;
-                padding: 0;
-                margin: 0;
-            }
-
-            body{
-                font-size: 14px;
-                font-family: 'Roboto', sans-serif;
-            }
-
-            img{
-                width: 100%;
-            }
-
-            ul{
-                list-style: none;
-            }
-
-            a{
-                text-decoration: none;
-                color: var(--text);
-            }
-
-            .d-flex{
-                display: flex;
-            }
-
-            .section-header{
-                display: flex;
-                width: 100%;
-                height: fit-content;
-                align-items: center;
-                justify-content: center;
-                margin-top: 35px;
-                font-weight: 300;
-                font-size: 25px;
-                color: var(--primary);
-            }
-
-            .section-sub{
-                display: flex;
-                width: 100%;
-                height: fit-content;
-                align-items: center;
-                justify-content: center;
-                margin-top: 10px;
-                font-weight: 300;
-                font-size: 20px;
-                color: var(--text);
-            }
-        /* Initial */    
 
         /* HEADER CSS START */
-            header{
-                box-shadow: 0px -4px 9px 6px var(--assist);;
-            }
+        .desk-header {
+            box-shadow: 0px -4px 9px 6px var(--assist);
+        }
 
-            .top-header{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: 35px;
-                background-color: var(--blue);
-                text-align: center;
-                color: var(--white);
-            }
+        .top-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 35px;
+            background-color: var(--blue);
+            text-align: center;
+            color: var(--white);
+        }
 
-            .middle-header{
-                display: block;
-                width: 100%;
-                height: fit-content;
-                background: var(--white);
-                overflow: hidden;
-            }
+        .middle-header {
+            display: block;
+            width: 100%;
+            height: fit-content;
+            background: var(--white);
+            overflow: hidden;
+        }
 
-            .middle-header ul {
-                display: flex;
-                float: right;
-                margin-right: 35px;
-                padding: 8px 0;
-            }
+        .middle-header ul {
+            display: flex;
+            float: right;
+            margin-right: 35px;
+            padding: 8px 0;
+        }
 
-            .middle-header ul li{
-                margin-right: 15px;
-            }
+        .middle-header ul li {
+            margin-right: 15px;
+        }
 
-            .middle-header ul li:last-child{
-                margin-right: 0;
-            }
+        .middle-header ul li:last-child {
+            margin-right: 0;
+        }
 
-            .middle-header ul li a{
-                text-transform: capitalize;
-            }
+        .middle-header ul li a {
+            text-transform: capitalize;
+        }
 
 
-            .bottom-header{
-                display: flex;
-                justify-content: space-between;
-                height: fit-content;
-                padding: 10px 0;
-                margin: 0 10px;
-                overflow: hidden;
-            }
+        .bottom-header {
+            display: flex;
+            justify-content: space-between;
+            height: fit-content;
+            padding: 10px 0;
+            margin: 0 10px;
+            overflow: hidden;
+        }
 
-            .left-menu .brand-logo a{
-                display: block;
-                width: 160px;
-                height: 60px;
-                margin-right: 25px;
-            }
+        .left-menu .brand-logo a {
+            display: block;
+            width: 160px;
+            height: 60px;
+            margin-right: 25px;
+        }
 
-            .left-menu .brand-logo a img{
-                width: 100%;
-                height: 100%;
-            }
+        .left-menu .brand-logo a img {
+            width: 100%;
+            height: 100%;
+        }
 
-            .menu-area .menu ul,
-            .social-icon .menu ul,
-            .right-menu,
-            .nav-right-icon ul{
-                display: flex;
-            }
+        .menu-area .menu ul,
+        .social-icon .menu ul,
+        .right-menu,
+        .nav-right-icon ul {
+            display: flex;
+        }
 
-            .social-icon .menu ul{
-                margin-top: 22px;
-            }
+        .social-icon .menu ul {
+            margin-top: 22px;
+        }
 
-            .nav-right-icon ul{
-                margin-top: 22px;
-                border-left: 1px solid var(--assist);
-            }
+        .nav-right-icon ul {
+            margin-top: 22px;
+            border-left: 1px solid var(--assist);
+        }
 
-            .menu-area .menu ul li{
-                margin: 30px 20px 0 0;
-            }
+        .menu-area .menu ul li {
+            margin: 30px 20px 0 0;
+        }
 
-            .menu-area .menu ul li a{
-                font-weight: 400;
-            }
+        .menu-area .menu ul li a {
+            font-weight: 400;
+        }
 
-            .social-icon{
-                padding-right: 8px;
-                
-            }
+        .social-icon {
+            padding-right: 8px;
 
-            .social-icon .menu ul li{
-                margin-right: 9px;
-            }
+        }
 
-            .social-icon .menu ul li:last-child{
-                margin-right: 0;
-            }
+        .social-icon .menu ul li {
+            margin-right: 9px;
+        }
 
-            .social-icon .menu ul li a{
-                width: 25px;
-                height: 25px;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: var(--black);
-                font-size: 13px;
-                color: var(--white);
-            }
+        .social-icon .menu ul li:last-child {
+            margin-right: 0;
+        }
 
-            .nav-right-icon ul li a{
-                width: 25px;
-                height: 25px;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 18px;
-                margin-left: 10px;
-            }
+        .social-icon .menu ul li a {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--black);
+            font-size: 13px;
+            color: var(--white);
+        }
+
+        .nav-right-icon ul li a {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+
+        #res-header {
+            margin-bottom: 25px;
+            box-shadow: 0px -4px 9px 6px var(--assist);
+            width: 100%;
+            height: 90px;
+            display: none;
+        }
+
+        .res-header-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+        }
+
+        .res-header-wrap i {
+            font-size: 35px;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        .res-logo {
+            width: 125px;
+            height: 90px;
+        }
+
+        .res-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: 100vh;
+            background: var(--white);
+            z-index: 3;
+            transform: translateX(-3500px);
+            transition: all .3s ease-in;
+        }
+
+        .res-nav .search-box {
+            width: 100%;
+            height: 30px;
+            position: relative;
+            margin-bottom: 15px;
+            margin-top: 5px;
+        }
+
+        .res-nav .search-box input {
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            border: 1px solid var(--assist);
+        }
+
+        .res-nav .search-box button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 6px;
+            border: none;
+            background: var(--primary);
+            color: var(--white);
+            width: 160px;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .res-nav ul {
+            margin-top: 20px;
+        }
+
+        .res-nav ul li {
+            padding-left: 10px;
+            line-height: 35px;
+            border-bottom: 1px solid var(--assist);
+        }
+
+        .res-nav ul li a {
+            font-size: 15px;
+        }
+
+        .res-social-icon {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .res-social-icon li {
+            border: none;
+            border-bottom: none !important;
+        }
+
         /* HEADER CSS END */
 
 
         /* BREADCRUMB CSS START */
-            .breadcrumb{
-                display: flex;
-                margin: 15px 0 15px 25px;
-            }
+        .breadcrumb {
+            display: flex;
+            margin: 15px 0 15px 25px;
+        }
 
-            .breadcrumb *{
-                margin-right: 10px;
-                font-size: 12px;
-                color: var(--assist);
-            }
+        .breadcrumb * {
+            margin-right: 10px;
+            font-size: 12px;
+            color: var(--assist);
+        }
+
         /* BREADCRUMB CSS END */
 
 
         /* SECTION 1 CSS START */
-        .content-wrapper h3{
+        .content-wrapper h3 {
             font-size: 35px;
             font-weight: 300;
             color: var(--primary);
@@ -232,38 +370,39 @@
             margin-bottom: 20px;
         }
 
-        .content-wrapper span{
+        .content-wrapper span {
             display: block;
             font-size: 15px;
             margin-bottom: 10px;
             font-weight: 300;
         }
 
-        .content-wrapper ol{
+        .content-wrapper ol {
             list-style-type: disc;
             margin-left: 13px;
         }
 
-        .content-wrapper ol li{
+        .content-wrapper ol li {
             line-height: 25px;
             font-weight: 300;
         }
+
         /* SECTION 1 CSS END */
 
 
 
-        /* SECTION 2 CSS START */  
-        .section-wrap{
+        /* SECTION 2 CSS START */
+        .section-wrap {
             margin-top: 35px;
         }
 
-        .section-wrap .section-img{
+        .section-wrap .section-img {
             width: 50px;
             margin: auto;
             margin-bottom: 20px;
         }
 
-        .section-wrap span{
+        .section-wrap span {
             display: block;
             width: fit-content;
             height: fit-content;
@@ -272,7 +411,7 @@
             margin: auto;
         }
 
-        .section-wrap p{
+        .section-wrap p {
             display: block;
             width: fit-content;
             height: fit-content;
@@ -281,17 +420,18 @@
             margin: auto;
             margin-top: 10px;
         }
-        /* SECTION 2 CSS END */   
-        
-        
-        /* SECTION 3 CSS START */ 
-        #section-background{
+
+        /* SECTION 2 CSS END */
+
+
+        /* SECTION 3 CSS START */
+        #section-background {
             background: var(--assist);
             margin-top: 35px;
             padding-bottom: 30px;
         }
 
-        .section-p{
+        .section-p {
             display: block;
             width: fit-content;
             height: fit-content;
@@ -301,16 +441,16 @@
             font-weight: 300;
         }
 
-        #section-3-mid{
+        #section-3-mid {
             background: #E7E7E7;
             padding-top: 35px;
         }
 
-        #section-3-bottom{
+        #section-3-bottom {
             padding-top: 35px;
         }
 
-        .section-3-wrap-title{
+        .section-3-wrap-title {
             font-size: 30px;
             color: var(--primary);
             font-weight: 400;
@@ -318,43 +458,43 @@
             margin-top: 45px;
         }
 
-        .section-3-wrap-sub{
+        .section-3-wrap-sub {
             display: block;
             font-size: 20px;
             color: var(--text);
             margin-bottom: 20px;
         }
 
-        .section-3-wrap strong{
+        .section-3-wrap strong {
             display: block;
             margin-bottom: 20px;
         }
 
-        .section-3-wrap p{
+        .section-3-wrap p {
             text-align: left;
             margin-bottom: 10px;
             color: var(--text);
             line-height: 25px;
         }
 
-        .list-header{
+        .list-header {
             display: block;
             text-align: left;
             margin-bottom: 10px;
             color: var(--text);
         }
 
-        .section-3-wrap ol{
+        .section-3-wrap ol {
             list-style-type: disc;
             margin-left: 15px;
         }
 
-        .section-3-wrap ol li{
+        .section-3-wrap ol li {
             line-height: 20px;
             color: var(--text);
         }
 
-        .section-3-wrap button{
+        .section-3-wrap button {
             display: block;
             width: fit-content;
             height: fit-content;
@@ -365,20 +505,23 @@
             color: var(--white);
             text-transform: uppercase;
             margin-top: 45px;
+            margin-bottom: 254px;
             border: none;
         }
-        /* SECTION 3 CSS END */ 
+
+        /* SECTION 3 CSS END */
 
 
 
-        /* SECTION 4 CSS START */ 
-        #section-4-bg{
+        /* SECTION 4 CSS START */
+        #section-4-bg {
             background: var(--assist);
             margin-top: 20px;
             padding-top: 30px;
+            padding-bottom: 25px;
         }
 
-        .sec-4-title{
+        .sec-4-title {
             font-size: 45px;
             color: var(--primary);
             font-weight: 400;
@@ -386,24 +529,24 @@
             margin-top: 45px;
         }
 
-        .sec-4-list-title{
+        .sec-4-list-title {
             display: block;
             text-align: left;
             margin-bottom: 10px;
             color: var(--white);
         }
 
-        .sec-4-wrapp ol{
+        .sec-4-wrapp ol {
             list-style-type: disc;
             margin-left: 15px;
         }
 
-        .sec-4-wrapp ol li{
+        .sec-4-wrapp ol li {
             line-height: 20px;
             color: var(--white);
         }
 
-        .sec-4-wrapp button{
+        .sec-4-wrapp button {
             display: block;
             width: fit-content;
             height: fit-content;
@@ -417,26 +560,27 @@
             cursor: pointer;
         }
 
-        .sec-4-btn-1{
+        .sec-4-btn-1 {
             margin-top: 100px !important;
         }
+
         /* SECTION 4 CSS END */
-        
-        
+
+
         /* SECTION 5 CSS START */
-        #sec-5-bg{
+        #sec-5-bg {
             background: var(--primary);
             padding-bottom: 30px;
         }
 
-        .sec-5-left-con{
+        .sec-5-left-con {
             display: grid;
             align-items: center;
             justify-items: center;
             padding-top: 50px;
         }
 
-        .sec-5-left-top{
+        .sec-5-left-top {
             background: var(--primary);
             display: grid;
             align-items: center;
@@ -446,25 +590,25 @@
             padding-bottom: 50px !important;
         }
 
-        .sec-5-left-con b{
+        .sec-5-left-con b {
             font-size: 40px;
             color: var(--text);
             margin-top: 75px;
         }
 
-        .sec-5-left-con strong{
+        .sec-5-left-con strong {
             font-size: 90px;
             color: var(--text);
         }
 
-        .sec-5-left-con span{
+        .sec-5-left-con span {
             font-size: 15px;
             color: var(--black);
             margin-bottom: 10px;
             font-weight: 500;
         }
 
-        .sec-5-left-con p{
+        .sec-5-left-con p {
             font-size: 15px;
             color: var(--text);
             margin-bottom: 10px;
@@ -477,20 +621,20 @@
             width: 100%;
         }
 
-        .sec-5-right-con{
+        .sec-5-right-con {
             background: #E2E2E2;
         }
 
-        .sec-5-right-con-bottom{
+        .sec-5-right-con-bottom {
             background: #626262;
         }
 
-        .sec-5-product .row *{
+        .sec-5-product .row * {
             padding: 0 !important;
-            
+
         }
 
-        .sec-5-right-con button{
+        .sec-5-right-con button {
             display: block;
             width: fit-content;
             height: fit-content;
@@ -507,7 +651,7 @@
             height: 35px;
         }
 
-        .sec-5-right-con span{
+        .sec-5-right-con span {
             display: block;
             width: fit-content;
             margin: auto;
@@ -516,7 +660,7 @@
             font-weight: 500;
         }
 
-        .product-table-custom{
+        .product-table-custom {
             display: grid;
             align-items: center;
             justify-items: center;
@@ -526,13 +670,108 @@
             font-weight: 300;
         }
 
-        .product-table-custom span{
+        .product-table-custom span {
             text-align: center;
             font-weight: 300;
             padding: 0 5px;
         }
 
-        #sec-5 .container .row *{
+
+        #sec-5 .left-site h3 {
+            font-size: 44px;
+            background-color: white;
+            color: rgb(0, 0, 0);
+        }
+
+        #sec-5 h3 {
+            padding: 20px 0;
+            text-align: center;
+            background-color: var(--primary);
+            color: white;
+        }
+
+        #sec-5 .left-site h2 {
+            font-size: 200px;
+            font-weight: 700;
+            text-align: center;
+            margin-top: -60px;
+            background-color: none;
+            color: rgb(111, 111, 111);
+        }
+
+        #sec-5 .left-site h6 {
+            color: black;
+            text-align: center;
+        }
+
+        #sec-5 .left-site p {
+            text-align: center;
+            width: 75%;
+            margin: 0 auto;
+            padding-bottom: 35px;
+        }
+
+        #sec-5 .button-area {
+            background-color: var(--secondary);
+            padding: 25px 0;
+            margin-top: -6px;
+        }
+
+        #sec-5 .button-area .buttons {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        #sec-5 .button-area .buttons button {
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 5px;
+            border: none;
+        }
+
+        #sec-5 table {
+            width: 100%;
+            float: right;
+            background-color: var(--secondary);
+            /* margin-left: 32px; */
+        }
+
+        #sec-5 th {
+            width: 21.5%;
+            text-align: center;
+        }
+
+        #sec-5 td {
+            text-align: center;
+        }
+
+        #sec-5 tr:nth-child(odd) td:first-child {
+            background-color: var(--secondary);
+        }
+
+        .table>thead>tr>th,
+        .table>thead>tr>td,
+        .table>tbody>tr>th,
+        .table>tbody>tr>td,
+        .table>tfoot>tr>th,
+        .table>tfoot>tr>td {
+            padding: 8px;
+            line-height: 1.42857143;
+            vertical-align: top;
+            border-top: 1px solid #ddd;
+        }
+
+        #sec-5 tr:nth-child(even) {
+            border: 2px solid black;
+            border-left: none;
+            border-right: none;
+        }
+
+        /* #sec-5 .container .row * {
             padding: 0;
         }
 
@@ -542,23 +781,23 @@
 
         .col-md-9.custom-width {
             width: 73% !important;
-        }
+        } */
 
-        .m-con{
+        .m-con {
             height: 475px !important;
         }
 
-        .sec-5-left-top.m-con ol{
+        .sec-5-left-top.m-con ol {
             list-style: disc;
             margin-left: 25px;
         }
 
-        .sec-5-left-top.m-con ol li{
+        .sec-5-left-top.m-con ol li {
             line-height: 15px;
             line-height: 24px;
         }
 
-        .sec-5-primary-button{
+        .sec-5-primary-button {
             display: block;
             width: fit-content;
             height: fit-content;
@@ -573,74 +812,310 @@
             cursor: pointer;
         }
 
-        .sec-5-banner{
+        .sec-5-banner {
             height: 100%;
         }
 
-        .sec-5-banner img{
+        .sec-5-banner img {
             width: 100%;
             height: 100%;
+        }
+
+        .products-tables table {
+            width: 95%;
+            float: right;
+            background-color: var(--secondary);
+            margin-left: 32px;
+
+        }
+
+        .products-tables th {
+            width: 21.5%;
+            text-align: center;
+        }
+
+        .products-tables th:first-child {
+            background-color: white;
+        }
+
+        .products-tables .table-area {
+            width: 90%;
+            margin: 0 auto;
+            background-color: var(--secondary);
+            margin-left: 30px;
+            padding: px 0;
+
+        }
+
+        .products-tables tr:nth-child(odd) td:first-child {
+            background-color: var(--secondary);
+        }
+
+        .products-tables tr td:first-child {
+            background-color: white;
+        }
+
+        .products-tables td {
+            text-align: center;
+        }
+
+        .products-tables tr:nth-child(even) {
+            border: 2px solid black;
+            border-left: none;
+            border-right: none;
+        }
+
+
+        #sec-5 .left-sites {
+            padding: 20px 0px;
+            background-color: var(--primary);
+            color: white;
+            margin-right: -25px;
+            height: 99.1%;
+        }
+
+        #sec-5 .left-sites h2 {
+            font-size: 200px;
+            font-weight: 700;
+            text-align: center;
+            margin-top: -20px;
+            background-color: none;
+            color: rgb(228, 228, 228);
+        }
+
+        #sec-5 .left-sites h4 {
+            color: var(--secondary);
+            padding-top: 25px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        #sec-5 .left-sites h6 {
+            color: black;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        #sec-5 .left-sites p {
+            text-align: center;
+            width: 75%;
+            margin: 0 auto;
+            padding-bottom: 35px;
+        }
+
+        #sec-5 .left-sites li {
+            text-align: left;
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        #sec-5 .left-site2 h4 {
+            font-size: 44px;
+            text-align: center;
+            color: var(--primary);
+            padding-top: 30px;
+        }
+
+        #sec-5 .left-site2 h2 {
+            font-size: 200px;
+            font-weight: 700;
+            text-align: center;
+            margin-top: -60px;
+            background-color: none;
+            color: rgb(111, 111, 111);
+        }
+
+        #sec-5 .left-site2 h6 {
+            color: black;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        #sec-5 .left-site2 p {
+            text-align: center;
+            width: 75%;
+            margin: 0 auto;
+            padding-bottom: 35px;
+            color: black;
+        }
+
+        .sec-5-res{
+            display: none;
+        }
+
+        .sec-5-res-wrap .sec-5-rs-step{
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .sec-5-res-wrap .sec-5-rs-step h3{
+            text-align: center;
+            font-size: 45px;
+            color: var(--assist);
+        }
+
+        .sec-5-res-wrap .sec-5-rs-step b{
+            text-align: center;
+            font-size: 25px;
+            color: var(--text);
+        }
+
+        .sec-5-res-wrap .sec-5-rs-step p{
+            text-align: center;
+            font-size: 18px;
+            line-height: 35px;
+            color: var(--text);
+        }
+
+        .sec-5-res-carosel{
+            padding: 15px;
+        }
+
+        .sec-5-res-carosel .sec-5-res-carosel-image{
+            width: 100%;
+            height: fit-content;
+        }
+
+        .sec-5-res-carosel .sec-5-res-carosel-button{
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            padding: 15px;
+            background: var(--primary);
+            border: none;
+            color: var(--white);
+            cursor: pointer;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .sec-5-res-carosel .sec-5-res-carosel-title{
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            color: var(--black);
+            cursor: pointer;
+            margin: auto;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .sec-5-res-carosel .sec-5-res-carosel-desc{
+            width: 100%;
+            height: fit-content;
+        }
+
+        .sec-5-res-carosel .sec-5-res-carosel-desc ul{
+            width: 100%;
+            height: fit-content;
+        }
+
+        .sec-5-res-carosel .sec-5-res-carosel-desc ul li{
+            width: 100%;
+            height: fit-content;
+            text-align: center;
+            line-height: 45px;
+            font-size: 18px;
+            border-bottom: 1px solid var(--text);
+            color: var(--text);
+        }
+
+        .sec-5-rs-step ol{
+            list-style: disc;
+            padding-bottom: 10px;
+        }
+
+        .sec-5-rs-step ol li{
+            width: 100%;
+            height: fit-content;
+            text-align: center;
+            line-height: 24px;
+            font-size: 14px;
+            color: var(--white);
+        }
+
+        .sec-5-rs-step-bg-image{
+            width: 100%;
+            height: fit-content;
+        }
+
+        .sec-5-res-pri-btn{
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            padding: 15px;
+            background: var(--primary);
+            border: none;
+            color: var(--white);
+            cursor: pointer;
+            margin: auto;
         }
         /* SECTION 5 CSS END */
 
 
         /* SECTION 6 CSS START */
-        #sec-6{
+        #sec-6 {
             margin-top: 70px;
         }
 
-        .sec-6-bottom{
+        .sec-6-bottom {
             margin-top: 15px;
             padding-bottom: 60px;
         }
 
-        .sec-6-wrap{
+        .sec-6-wrap {
             margin-top: 15px;
         }
 
-        .sec-6-white-paper{
+        .sec-6-white-paper {
             width: 100%;
             height: 150px;
-            background: var(--blue);            
+            background: var(--blue);
         }
 
-        .sec-6-span-f-child{
+        .sec-6-span-f-child {
             display: block;
             font-size: 35px;
             color: var(--primary);
             margin-bottom: 10px;
         }
 
-        .sec-6-span-l-child{
+        .sec-6-span-l-child {
             font-size: 15px;
             color: var(--text);
         }
+
+        .col-md-6 .custom-border {
+            border-right: 1px solid black;
+        }
+
         /* SECTION 6 CSS END */
 
 
         /* FOOTER SECTION CSS START */
-        .brand-f-logo a{
+        .brand-f-logo a {
             width: 150px;
             display: block;
         }
 
-        footer .social-icons ul{
+        footer .social-icons ul {
             display: flex;
         }
 
-        footer .social-icons ul li{
+        footer .social-icons ul li {
             display: flex;
         }
 
-        footer .social-icons ul li{
-                margin-right: 9px;
-            }
+        footer .social-icons ul li {
+            margin-right: 9px;
+        }
 
-        footer .social-icons ul li:last-child{
+        footer .social-icons ul li:last-child {
             margin-right: 0;
         }
 
-        footer .social-icons ul li a{
+        footer .social-icons ul li a {
             width: 25px;
             height: 25px;
             border-radius: 50%;
@@ -652,64 +1127,64 @@
             color: var(--white);
         }
 
-        .footer-title h5{
-            text-transform: uppercase;
-            font-size: 18px;
-            font-weight: 500;
-            color: var(--assist);
-        }  
-        
-        .mail-input h5{
+        .footer-title h5 {
             text-transform: uppercase;
             font-size: 18px;
             font-weight: 500;
             color: var(--assist);
         }
 
-        .footer-area{
+        .mail-input h5 {
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--assist);
+        }
+
+        .footer-area {
             background-color: #E6E7E8;
             padding: 25px 0;
             font-size: 13px;
         }
 
-        .footer-area li{
+        .footer-area li {
             list-style: none;
             color: var(--assist);
         }
 
-        .footer-area li a:hover{
+        .footer-area li a:hover {
             font-weight: 400;
         }
 
-        .footer-area li a{
+        .footer-area li a {
             text-decoration: none;
             color: var(--text);
             line-height: 25px;
         }
 
-        .copy-right{
+        .copy-right {
             background-color: var(--assist);
             font-size: 13px;
             color: white;
             padding: 10px 0;
         }
 
-        .footer-area .d-flex{
+        .footer-area .d-flex {
             justify-content: space-between;
         }
 
-        .input-box{
+        .input-box {
             width: 100%;
         }
 
-        .input-box input{
+        .input-box input {
             width: 100%;
             border: none;
             padding: 5px;
             margin-bottom: 5px;
         }
 
-        .mail-button button{
+        .mail-button button {
             display: block;
             width: 100px;
             height: 40px;
@@ -722,234 +1197,319 @@
             cursor: pointer;
             float: right;
         }
+
         /* FOOTER SECTION CSS END */
-        
+
+
+
+        /* RESPONSIVE  CSS START */
+        @media only screen and (max-width: 852px) {
+            #desk-header {
+                display: none;
+            }
+
+            #res-header {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .section-3-wrap button {
+                float: left;
+            }
+
+            #sec-5 table {
+                float: left;
+            }
+
+            #sec-5 .left-sites {
+                height: 100% !important;
+            }
+
+            #sec-5-desk {
+                display: none;
+            }
+
+            .col-md-6 .custom-border {
+                border-right: none;
+            }
+
+            .sec-5-res{
+                display: block;
+            }
+        }
+
+
+
+        /* RESPONSIVE  CSS END */
     </style>
 </head>
+
 <body id="body">
 
-<!-- HEADER SECTION -->
-<header>
-    <div class="top-header">
-        <p>Request a DEMO TABLET today - Conditions apply</p>
+    <div class="back-drop"></div>
+
+    <div class="res-nav-close">
+        <i class="fa-solid fa-circle-xmark"></i>
     </div>
-    <div class="middle-header">
-        <ul> 
-            <li><a href="#">welcome back</a></li>
-            <li><a href="#">log in register</a></li>
-            <li><a href="#">request a quote</a></li>
+
+    <!-- HEADER SECTION -->
+    <header id="desk-header">
+        <div class="top-header">
+            <p>Request a DEMO TABLET today - Conditions apply</p>
+        </div>
+        <div class="middle-header">
+            <ul>
+                <li><a href="#">welcome back</a></li>
+                <li><a href="#">log in register</a></li>
+                <li><a href="#">request a quote</a></li>
+            </ul>
+        </div>
+        <div class="bottom-header">
+            <div class="left-menu d-flex">
+                <div class="brand-logo">
+                    <a href="#">
+                        <img src="images/MobileDemand-logo.png" alt="">
+                    </a>
+                </div>
+                <div class="menu-area">
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="">Products</a></li>
+                            <li><a href="">INDUSthIES</a></li>
+                            <li><a href="">RESOURCES</a></li>
+                            <li><a href="">ABOUT </a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="right-menu">
+                <div class="social-icon">
+                    <nav class="menu">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa-brands fa-pinterest-p"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="nav-right-icon">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-bars"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <header id="res-header">
+        <div class="res-header-wrap">
+            <i id="res-menu-icon" class="fa-solid fa-bars"></i>
+            <div class="res-logo">
+                <img src="images/MobileDemand-logo.png" alt="">
+            </div>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </header>
+
+    <nav class="res-nav">
+        <div class="search-box">
+            <input type="text" placeholder="search here">
+            <button>search</button>
+        </div>
+        <ul>
+            <li><a href="">Products</a></li>
+            <li><a href="">INDUSthIES</a></li>
+            <li><a href="">RESOURCES</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">Contact</a></li>
         </ul>
+
+        <ul class="res-social-icon">
+            <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-twitter-square"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-instagram-square"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-pinterest-square"></i></a></li>
+        </ul>
+    </nav>
+
+
+    <!-- BREADCRUMB SECTION -->
+    <div class="breadcrumb">
+        <a href="">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="">Products</a>
+        <i class="fa-solid fa-chevron-right"></i>
     </div>
-    <div class="bottom-header">
-        <div class="left-menu d-flex">
-            <div class="brand-logo">
-                <a href="#">
-                    <img src="images/MobileDemand-logo.png" alt="">
-                </a>
-            </div>    
-            <div class="menu-area">
-                <nav class="menu">
-                    <ul> 
-                        <li><a href="">Products</a></li>
-                        <li><a href="">INDUSthIES</a></li>
-                        <li><a href="">RESOURCES</a></li>
-                        <li><a href="">ABOUT </a></li>
-                        <li><a href="">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
-        <div class="right-menu">
-            <div class="social-icon">
-                <nav class="menu">
-                    <ul> 
-                        <li>
-                            <a href="">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="fa-brands fa-pinterest-p"></i> 
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="nav-right-icon">
-                <ul>
-                    <li>
-                        <a href="">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <span>1</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="fa-solid fa-bars"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</header>
 
 
-<!-- BREADCRUMB SECTION -->
-<div class="breadcrumb">
-    <a href="">Home</a>
-    <i class="fa-solid fa-chevron-right"></i>
-    <a href="">Products</a>
-    <i class="fa-solid fa-chevron-right"></i>
-</div>
-
-
-<!-- SECTION 1 -->
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="content-wrapper">
-                    <img src="images/pos-hero.jpg" alt="">
+    <!-- SECTION 1 -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="content-wrapper">
+                        <img src="images/pos-hero.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="content-wrapper">
+                        <h3>
+                            Give Customers a Fast, Safe
+                            and Secure Way to Pay
+                        </h3>
+                        <span>MobileDemand mobile point-of-sale solutions:</span>
+                        <ol>
+                            <li>End long customer lines with a quicker way to pay</li>
+                            <li>Integrate safe, sleek and secure credit card technology</li>
+                            <li>Provide customers with available inventory a point of sale</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="content-wrapper">
-                    <h3>
-                        Give Customers a Fast, Safe
-                        and Secure Way to Pay
+        </div>
+        <div class="content-wrapper-img">
+            <img src="images/curbside.jpg" alt="">
+        </div>
+    </section>
+
+
+    <!-- SECTION 2 -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="section-header">
+                        KEY ADVANTAGES OF MOBILE POS
                     </h3>
-                    <span>MobileDemand mobile point-of-sale solutions:</span>
-                    <ol>
-                        <li>End long customer lines with a quicker way to pay</li>
-                        <li>Integrate safe, sleek and secure credit card technology</li>
-                        <li>Provide customers with available inventory a point of sale</li>
-                    </ol>
                 </div>
             </div>
-        </div>        
-    </div>
-    <div class="content-wrapper-img">
-        <img src="images/curbside.jpg" alt="">
-    </div>
-</section>
-
-
-<!-- SECTION 2 -->
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3 class="section-header">
-                    KEY ADVANTAGES OF MOBILE POS
-                </h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="section-wrap">
-                    <div class="section-img">
-                        <img src="images/pos-icon-footprint.png" alt="">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="section-wrap">
+                        <div class="section-img">
+                            <img src="images/pos-icon-footprint.png" alt="">
+                        </div>
+                        <span>Increase Footprint</span>
+                        <p>
+                            Eliminate long customer waits with line
+                            busting or take your mobile POS to outdoor tents, sidewalks, the sales floor,
+                            parking lot events and more. Mobility
+                            gives your sales team a larger footprint
+                            to engage with more customers
+                        </p>
                     </div>
-                    <span>Increase Footprint</span>
-                    <p>
-                        Eliminate long customer waits with line
-                        busting or take your mobile POS to outdoor tents, sidewalks, the sales floor,
-                        parking lot events and more. Mobility
-                        gives your sales team a larger footprint
-                        to engage with more customers
-                    </p>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="section-wrap">
-                    <div class="section-img">
-                        <img src="images/pos-icon-conversions.png" alt="">
+                <div class="col-md-3">
+                    <div class="section-wrap">
+                        <div class="section-img">
+                            <img src="images/pos-icon-conversions.png" alt="">
+                        </div>
+                        <span>Increase Conversions</span>
+                        <p>
+                            Increase sales and personalize service
+                            by assisting customers with product
+                            information, availability and delivery
+                            dates during face-to-face interactions
+                        </p>
                     </div>
-                    <span>Increase Conversions</span>
-                    <p>
-                        Increase sales and personalize service
-                        by assisting customers with product
-                        information, availability and delivery
-                        dates during face-to-face interactions
-                    </p>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="section-wrap">
-                    <div class="section-img">
-                        <img src="images/pos-icon-expansion.png" alt="">
+                <div class="col-md-3">
+                    <div class="section-wrap">
+                        <div class="section-img">
+                            <img src="images/pos-icon-expansion.png" alt="">
+                        </div>
+                        <span>Ease of Expansion</span>
+                        <p>
+                            Mobile POS devices are lower cost
+                            than traditional checkout and payment
+                            options, allowing faster implementation of additional stores with minimal
+                            investment
+                        </p>
                     </div>
-                    <span>Ease of Expansion</span>
-                    <p>
-                        Mobile POS devices are lower cost
-                        than traditional checkout and payment
-                        options, allowing faster implementation of additional stores with minimal
-                        investment
-                    </p>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="section-wrap">
-                    <div class="section-img">
-                        <img src="images/pos-icon-carry.png" alt="">
+                <div class="col-md-3">
+                    <div class="section-wrap">
+                        <div class="section-img">
+                            <img src="images/pos-icon-carry.png" alt="">
+                        </div>
+                        <span>Easy to Carry and Hold</span>
+                        <p>
+                            Fatigue can quickly become a factor
+                            during the workday. Our mobile POS
+                            devices are equipped with an easy
+                            carry briefcase handle and back hand
+                            strap that allow a safe, secure and
+                            comfortable grip.
+                        </p>
                     </div>
-                    <span>Easy to Carry and Hold</span>
-                    <p>
-                        Fatigue can quickly become a factor
-                        during the workday. Our mobile POS
-                        devices are equipped with an easy
-                        carry briefcase handle and back hand
-                        strap that allow a safe, secure and
-                        comfortable grip. 
-                    </p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
-<!-- SECTION 3 -->
-<section id="section-background">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3 class="section-header">
-                    MOBILE POS OPTIONS
-                </h3>
+    <!-- SECTION 3 -->
+    <section id="section-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="section-header">
+                        MOBILE POS OPTIONS
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="section-p">
+                        No two businesses are alike, that is why we offer multiple options to complete your mobile
+                        point-of-sale solution.
+                        Option 1- Includes the 3-in-1 MagTek tDynamo payment module fully integrated into the
+                        lightweight, rugged T1190 tablet.
+                        Option 2 - Consists of a combination of rugged devices and multiple module brackets designed to
+                        hold a variety of popular POS devices.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="section-p">
-                    No two businesses are alike, that is why we offer multiple options to complete your mobile point-of-sale solution.
-                    Option 1- Includes the 3-in-1 MagTek tDynamo payment module fully integrated into the lightweight, rugged T1190 tablet.
-                    Option 2 - Consists of a combination of rugged devices and multiple module brackets designed to hold a variety of popular POS devices. 
-                </p>
-            </div>
-        </div>        
-    </div>    
-</section> 
-<section id="section-3-mid">
-    <div class="container">
+    </section>
+    <section id="section-3-mid">
+        <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <div class="section-3-wrap">
@@ -975,10 +1535,10 @@
                     </div>
                 </div>
             </div>
-    </div>
-</section>  
-<section id="section-3-bottom">
-    <div class="container">
+        </div>
+    </section>
+    <section id="section-3-bottom">
+        <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <div class="section-3-wrap">
@@ -1002,720 +1562,881 @@
                                 sold separately</li>
                         </ol>
                     </div>
-                </div>                
-            </div>
-    </div>
-</section> 
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <img src="images/bracket-table.jpg" alt="">
-            </div>
-        </div>
-    </div> 
-</section>  
-
-
-<!-- SECTION 4 -->
-<section id="section-4-bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="sec-4-wrapp">
-                    <h3 class='sec-4-title'>
-                        Protect your Surface tablet with MobileDemand’s Rugged xCase.
-                    </h3>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="sec-4-wrapp">
-                                <span class="sec-4-list-title">The xCase allows you to:</span>
-                                <ol>
-                                    <li>Have rugged protection</li>
-                                    <li>Go into harsh environments</li>
-                                    <li>Easily carry and hold</li>
-                                    <li>Multipurpose tool</li>
-                                </ol>
-                                <button class="sec-4-btn-1">SURFACE xCASE</button>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="sec-4-wrapp">
-                                <span class="sec-4-list-title">You can purchase a stand alone
-                                    Surface xCase or a bundled solution that can include:</span>
-                                <ol>
-                                    <li>Choice of Surface tablet</li>
-                                    <li>Installed screen protector</li>
-                                    <li>Payment brackets</li>
-                                    <li>Barcode scanners</li>
-                                    <li>Ready to go out of the box</li>
-                                </ol>
-                                <button>SURFACE BUNDLES</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="sec-4-img">
-                    <img src="images/surface-xcase.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</section> 
-
-
-<!-- SECTION 5 -->
-<section id="sec-5-bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3 class="section-header" style="color: #ffffff;">
-                    LET’S BUILD YOUR MOBILE POS SOLUTION
-                </h3>
-            </div>
-        </div>
-    </div>
-</section> 
-<section id="sec-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="sec-5-wrap">
-                    <div class="sec-5-left-con">
-                        <div class="sec-5-left-top" style="background: #ffffff;">
-                            <b>STEP</b>
-                            <strong>1</strong>
-                            <span>BRACKET SELECTION</span>
-                            <p>
-                                Begin by determining which of these modules you need
-                            </p>
-                        </div>
-                        <div class="sec-5-left-table">
-                            <div class="product-table-custom">
-                                <span>
-                                    3-in-1 Payment
-                                </span>
-                            </div>
-                            <div class="product-table-custom">
-                                <span>
-                                    Connectivity
-                                </span>
-                            </div>
-                            <div class="product-table-custom">
-                                <span>
-                                    Display
-                                </span>
-                            </div>
-                            <div class="product-table-custom">
-                                <span>
-                                    Memory
-                                </span>
-                            </div>
-                            <div class="product-table-custom">
-                                <span>
-                                    OS Compatibility
-                                </span>
-                            </div>
-                            <div class="product-table-custom">
-                                <span>
-                                    Battery
-                                </span>
-                            </div>
-                            <div class="product-table-custom">
-                                <span>
-                                    Barcode Scanner
-                                </span>
-                            </div>
-                            <div class="product-table-custom">
-                                <span>
-                                    Security
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-9 custom-width">
-                <div class="sec-5-product">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="sec-5-right-con">
-                                <div class="sec-5-right-con-img">
-                                    <img src="images/module-table-verifone-e285.jpg" alt="">
-                                </div>
-                                <button>VIEW BRACKET</button>
-                                <span>Verifone e285</span>
-                                <div class="product-table-custom">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        Bluetooth 4.2 
-                                        Wi-Fi 2.4GHz and 5GHZ
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        2.8” Color touchscreen
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        512MB Flash 
-                                        512MB DDR
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        Linux-based
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        Li-ion/1800mAH
-                                        Replaceable
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        PCI PTS 5.x
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="sec-5-right-con">
-                                <div class="sec-5-right-con-img">
-                                    <img src="images/module-table-ismp4.jpg" alt="">
-                                </div>
-                                <button>VIEW BRACKET</button>
-                                <span>Ingenico iSMP4</span>
-                                <div class="product-table-custom">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        Bluetooth Class II
-                                        Wi-Fi
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        2.8” Color
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        128MB Flash
-                                        32MB SDRAM
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        Telium TETRA
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        Li-ion/2000mAH
-                                        Replaceable
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        1D/2D
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        PCI PTS 5.x
-                                        Multiple P2PE schemes
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="sec-5-right-con">
-                                <div class="sec-5-right-con-img">
-                                    <img src="images/module-table-2500.jpg" alt="">
-                                </div>
-                                <button>VIEW BRACKET</button>
-                                <span>Ingenico Link/2500</span>
-                                <div class="product-table-custom">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        Bluetooth Class II
-                                        Wi-Fi (Dual band)
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        2.4” Color
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        256MB Flash
-                                        128MB RAM
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        Telium TETRA
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        Li-ion/600mAH
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        PCI PTS v5.x
-                                        Online & offline certified
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="sec-5-right-con">
-                                <div class="sec-5-right-con-img">
-                                    <img src="images/module-table-2500i.jpg" alt="">
-                                </div>
-                                <button>VIEW BRACKET</button>
-                                <span>Ingenico Link/2500i</span>
-                                <div class="product-table-custom">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        Bluetooth 4.2 Class B
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        2.4” Color
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        256MB Flash
-                                        128MB RAM
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        Telium TETRA
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        Li-ion/1200mAH
-                                        Removable
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span>
-                                        PCI PTS v5.x
-                                        Online & offline certified
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>   
-<section id="sec-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 custom-width">
-                <div class="sec-5-wrap">
-                    <div class="sec-5-left-con">
-                        <div class="sec-5-left-top m-con">
-                            <b style="color: #fff;">STEP</b>
-                            <strong style="color: #fff;">2</strong>
-                            <span style="color: #000;">BARCODE SCANNER</span>
-                            <p style="color: #000;">
-                                Do you need to be able to scan barcodes as part of your mobile POS solution?
-                            </p>
-                            <ol>
-                                <li>
-                                    Enables large appliance and furniture showrooms to quickly access inventory data
-                                </li>
-                                <li>
-                                    Provides shoppers with instantaneous data speeds
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-9">
-                <div class="sec-5-banner">
-                    <img src="images/step-2-image.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</section> 
-<section id="sec-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="sec-5-wrap">
-                    <div class="sec-5-left-con">
-                        <div class="sec-5-left-top" style="background: #E7E7E7; height: 291px;">
-                            <b style="color: #FF9600; margin-top: 30px;">STEP</b>
-                            <strong style="color: #FF9600;">3</strong>
-                            <span>RUGGED DEVICE</span>
-                            <p>
-                                Choose between several Surface xCase or Bundled solutions and the lightweight, rugged T1190 tablet.
-                            </p>
-                        </div>
-                        <div class="sec-5-left-table">
-                            <div class="product-table-custom" style="background: #E7E7E7;">
-                                <span>
-                                    Proven Rugged
-                                </span>
-                            </div>
-                            <div class="product-table-custom" style="background: #E7E7E7;">
-                                <span>
-                                    Optional Barcode Scanner
-                                </span>
-                            </div>
-                            <div class="product-table-custom" style="background: #E7E7E7;">
-                                <span>
-                                    Screen Size
-                                </span>
-                            </div>
-                            <div class="product-table-custom" style="background: #E7E7E7;">
-                                <span>
-                                    Mountable
-                                </span>
-                            </div>
-                            <div class="product-table-custom" style="background: #E7E7E7;">
-                                <span>
-                                    Easy Carry Straps
-                                </span>
-                            </div>
-                            <div class="product-table-custom" style="background: #E7E7E7;">
-                                <span>
-                                    Weight in Pounds (est)
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-9 custom-width">
-                <div class="sec-5-product">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="sec-5-right-con-bottom">
-                                <div class="sec-5-right-con-img">
-                                    <img src="images/tablet-table-surface-go.jpg" alt="">
-                                </div>
-                                <span style="color: #fff; display: block; text-align: center;">Surface Go</span>
-                                <div class="product-table-custom">
-                                    <i style="color: #8DC63F;" class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <i style="color: #8DC63F;" class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span style="color: #fff;">
-                                        10.0”
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <i style="color: #8DC63F;" class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <i style="color: #8DC63F;" class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span style="color: #fff;">
-                                        1.15
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="sec-5-right-con-bottom">
-                                <div class="sec-5-right-con-img">
-                                    <img src="images/tablet-table-surface-pro.jpg" alt="">
-                                </div>
-                                <span style="color: #fff; display: block; text-align: center;">Surface Pro 7+</span>
-                                <div class="product-table-custom">
-                                    <i style="color: #8DC63F;" class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <i style="color: #8DC63F;" class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span style="color: #fff;">
-                                        12.3”
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <i style="color: #8DC63F;" class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <i style="color: #8DC63F;" class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span style="color: #fff;">
-                                        1.72
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="sec-5-right-con-bottom">
-                                <div class="sec-5-right-con-img">
-                                    <img src="images/tablet-table-surface-pro8.jpg" alt="">
-                                </div>
-                                <span style="color: #fff; display: block; text-align: center;">Surface Pro 8</span>
-                                <div class="product-table-custom">
-                                    <i style="color: #8DC63F;" class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <i style="color: #8DC63F;" class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span style="color: #fff;">
-                                        13.0”
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <i style="color: #8DC63F;" class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <i style="color: #8DC63F;" class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span style="color: #fff;">
-                                        1.74
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="sec-5-right-con-bottom">
-                                <div class="sec-5-right-con-img">
-                                    <img src="images/tablet-table-t1190.jpg" alt="">
-                                </div>
-                                <span style="color: #fff; display: block; text-align: center;">xTablet T1190</span>
-                                <div class="product-table-custom">
-                                    <i style="color: #8DC63F;" class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <i style="color: #8DC63F;" class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span style="color: #fff;">
-                                        10.1”
-                                    </span>
-                                </div>
-                                <div class="product-table-custom">
-                                    <i style="color: #8DC63F;" class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <i style="color: #8DC63F;" class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="product-table-custom">
-                                    <span style="color: #fff;">
-                                        2.3
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <button class="sec-5-primary-button">
-        CONTACT US FOR YOUR MOBILE POS SOLUTION 
-    </button>
-</section>
-
-
-<!-- SECTION 6 -->
-<section id="sec-6">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3 class="section-header" style="font-size: 45px;">
-                    LEARN MORE
-                </h3>
-                <span class="section-sub">
-                    PRESS RELEASES | BLOG ARTICLES | VIDEOS
-                </span>
-            </div>
-        </div>
-        <div class="sec-6-bottom">
-            <div class="row">
-                <div class="col-md-6" style="border-right: 1px solid black;">
-                    <div class="sec-6-wrap" >
-                        <div class="sec-6-white-paper"></div>
-                        <span class="sec-6-span-f-child">
-                            Mobile POS White Paper
-                        </span>
-                        <span class="sec-6-span-l-child">
-                            POSted on XX/XX/XXXX
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="sec-6-wrap">
-                        <div class="sec-6-white-paper"></div>
-                        <span class="sec-6-span-f-child">
-                            Another White Paper
-                        </span>
-                        <span class="sec-6-span-l-child">
-                            POSted on XX/XX/XXXX
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- FOOTER SECTION -->
-<footer>
-    <section class="footer-area">
-        <div class="container">
-            <div class="row flex-box">
-                <div class="col-md-4 col-sm-12">
-                   <div class="d-flex">
-                        <div class="footer-logo">
-                            <div class="brand-f-logo">
-                                <a href=""><img src="images/MobileDemand-logo.png" alt=""></a>
-                                
-                            </div>
-                            <div class="social-icons">
-                                <ul> 
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-pinterest-p"></i> 
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="footer-title">
-                            <h5>help</h5>
-                            <ul class="">
-                                <li><a href="">Contact Us</a></li>
-                                <li><a href="">Service Request</a></li>
-                                <li><a href="">Warranty Info</a></li>
-                                <li><a href="">Drivers & Downloads</a></li>
-                                <li><a href="">Terms and Conditions</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-12">
-                    <div class="d-flex">
-                        <div class="footer-title">
-                            <h5>OUR PRODUCTS</h5>
-                            <ul>
-                                <li><a href=""> Sales and Savings</a></li>
-                                <li><a href="">Mounts and Accessories</a></li>
-                                <li><a href="">Entry-Level Rugged Tablets</a></li>
-                                <li><a href="">Value-Performance Rugged Tablets </a></li>
-                                <li><a href="">Mid-Performance Rugged Tablets </a></li>
-                                <li><a href="">High Performance & Productivity </a></li>
-                                <li><a href="">Rugged Case - iPad </a></li>
-                                <li><a href="">Rugged Case - Microsoft Surface </a></li>
-                                <li><a href=""> Rugged Microsoft Surface Bundles </a></li>
-                            </ul>
-                        </div>
-
-                        <div class="footer-title">
-                            <h5>RESOURCES</h5>
-                            <ul>
-                                <li><a href="">  Success Stories</a></li>
-                                <li><a href="">  FAQ</a></li>
-                                <li><a href=""> Patents</a></li>
-                                <li><a href="">Testimonials</a></li>
-                                <li><a href=""> Industries </a></li>
-                                <li><a href="">  Partner Directory </a></li>
-                                <li><a href="">About MobileDemand</a></li>
-                                <li><a href=""> Careers</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-12">
-                   <div class="d-flex">
-                        <div class="footer-title">
-                            <h5>LEGAL</h5>
-                        </div>
-
-                        <div class="mail-input">
-                            <h5>EMAIL SIGN UP</h5>
-                            <div class="input-box">
-                                <input type="email" placeholder="username@domain.com">
-                            </div>
-                            <div class="mail-button">
-                                <button>Sign UP</button>
-                            </div>
-                        </div>
-                   </div>
                 </div>
             </div>
         </div>
     </section>
-    <div class="footer-copy-right" style="background: #626262;">
+    <section>
         <div class="container">
-            <div class="copy-right">
-                <p>© 2020 MobileDemand, L.C. | 1501 Boyson Square Drive, Suite 101, Hiawatha, IA 52233 | 319.363.4121 All Rights Reserved. | Legal</p>
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="images/bracket-table.jpg" alt="">
+                </div>
             </div>
         </div>
-    </div> 
-</footer>   
+    </section>
+
+
+    <!-- SECTION 4 -->
+    <section id="section-4-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="sec-4-wrapp">
+                        <h3 class='sec-4-title'>
+                            Protect your Surface tablet with MobileDemand’s Rugged xCase.
+                        </h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="sec-4-wrapp">
+                                    <span class="sec-4-list-title">The xCase allows you to:</span>
+                                    <ol>
+                                        <li>Have rugged protection</li>
+                                        <li>Go into harsh environments</li>
+                                        <li>Easily carry and hold</li>
+                                        <li>Multipurpose tool</li>
+                                    </ol>
+                                    <button class="sec-4-btn-1">SURFACE xCASE</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="sec-4-wrapp">
+                                    <span class="sec-4-list-title">You can purchase a stand alone
+                                        Surface xCase or a bundled solution that can include:</span>
+                                    <ol>
+                                        <li>Choice of Surface tablet</li>
+                                        <li>Installed screen protector</li>
+                                        <li>Payment brackets</li>
+                                        <li>Barcode scanners</li>
+                                        <li>Ready to go out of the box</li>
+                                    </ol>
+                                    <button>SURFACE BUNDLES</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="sec-4-img">
+                        <img src="images/surface-xcase.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 5 -->
+    <main id="sec-5-desk">
+        <section id="sec-5-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="section-header" style="color: #ffffff;">
+                            LET’S BUILD YOUR MOBILE POS SOLUTION
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sec-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-12">
+                        <div class="left-site">
+                            <h3>STEP</h3>
+                            <h2>1</h2>
+                            <h6>BRACKET SELECTION</h6>
+                            <p>Begin by determining which of these modules you need.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-12">
+                        <div><img src="images/module-table-gang.jpg" alt="mobile-table" class="img-fluid">
+                            <div class="button-area">
+                                <div class="buttons">
+                                    <div><button>VIEW BRACKET</button></div>
+                                    <div><button>VIEW BRACKET</button></div>
+                                    <div><button>VIEW BRACKET</button></div>
+                                    <div><button>VIEW BRACKET</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="width: 100%;overflow: auto;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Verifone e285 </th>
+                                        <th>Ingenico iSMP4</th>
+                                        <th>Ingenico Link/2500</th>
+                                        <th>Ingenico Link/2500i</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            3-in-1 Payment
+                                        </td>
+                                        <td><i class="fa-solid fa-check"></i></td>
+                                        <td><i class="fa-solid fa-check"></i></td>
+                                        <td><i class="fa-solid fa-check"></i></td>
+                                        <td><i class="fa-solid fa-check"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Connectivity
+                                        </td>
+                                        <td>Bluetooth 4.2
+                                            Wi-Fi 2.4GHz and 5GHZ</td>
+                                        <td>Bluetooth Class II
+                                            Wi-Fi</td>
+                                        <td>Bluetooth Class II
+                                            Wi-Fi (Dual band)</td>
+                                        <td>Bluetooth 4.2 Class B</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Display
+                                        </td>
+                                        <td>2.8” Color touchscreen</td>
+                                        <td>2.81” Color </td>
+                                        <td>2.4” Color</td>
+                                        <td>2.4” Color</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Memory
+                                        </td>
+                                        <td>512MB Flash
+                                            512MB DDR</td>
+                                        <td>128MB Flash
+                                            32MB SDRAM
+                                        </td>
+                                        <td>256MB Flash
+                                            128MB RAM</td>
+                                        <td>256MB Flash
+                                            128MB RAM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            OS Compatibility
+                                        </td>
+                                        <td>Linux-based </td>
+                                        <td>Telium TETRA
+                                        </td>
+                                        <td>Telium TETRA</td>
+                                        <td>Telium TETRA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Battery
+                                        </td>
+                                        <td>Li-ion/1800mAH
+                                            Replaceable</td>
+                                        <td>Li-ion/2000mAH
+                                            Removable
+                                        </td>
+                                        <td>Li-ion/600mAH</td>
+                                        <td>Li-ion/1200mAH
+                                            Removable</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Barcode Scanner
+                                        </td>
+                                        <td></td>
+                                        <td>1D/2D
+
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Security
+                                        </td>
+                                        <td>PCI PTS 5.x</td>
+                                        <td>PCI PTS 5.x
+                                            Multiple P2PE schemes
+                                        </td>
+                                        <td>PCI PTS v5.x
+                                            Online &amp; offline certified</td>
+                                        <td>PCI PTS v5.x
+                                            Online &amp; offline certified</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sec-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12">
+                        <div class="left-sites">
+                            <h4>STEP</h4>
+                            <h2>2</h2>
+                            <h6>BARCODE SCANNER</h6>
+                            <p>Do you need to be able to scan
+                                barcodes as part of your
+                                mobile POS solution?</p>
+                            <div>
+                                <li>Enables large appliance and
+                                    furniture showrooms to quickly access inventory data</li>
+                                <li>Provides shoppers with instantaneous data speeds</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-12">
+                        <div style="height: 107%;">
+                            <div style="height: 100%;">
+                                <img style="height: 100%;" src="images/step-2-image.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sec-5" style="margin-top: 35px;z-index: 1;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12">
+                        <div class="left-site2">
+                            <h4>STEP</h4>
+                            <h2>3</h2>
+                            <h6>RUGGED DEVICE</h6>
+                            <p>Choose between several Surface
+                                xCase or Bundled solutions
+                                and the lightweight, rugged
+                                T1190 tablet.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-12">
+                        <div style="height: 100%;">
+                            <div style="height: 100%;">
+                                <img style="height: 100%;" src="images/tablet-table-gang.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 100%;overflow: auto;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Surface Go </th>
+                                <th>Surface Pro 7+</th>
+                                <th>Surface Pro 8</th>
+                                <th>xTablet T1190</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Proven Rugged</td>
+                                <td><i class="fa-solid fa-circle-check"></i></td>
+                                <td><i class="fa-solid fa-circle-check"></i></td>
+                                <td><i class="fa-solid fa-circle-check"></i></td>
+                                <td><i class="fa-solid fa-circle-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Optional Barcode Scanner</td>
+                                <td><i class="fa-solid fa-circle-check"></i></td>
+                                <td><i class="fa-solid fa-circle-check"></i></td>
+                                <td><i class="fa-solid fa-circle-xmark"></i></td>
+                                <td><i class="fa-solid fa-circle-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Screen Size</td>
+                                <td>10"</td>
+                                <td>12.3"</td>
+                                <td>13"</td>
+                                <td>10.1"</td>
+                            </tr>
+                            <tr>
+                                <td>Mountable</td>
+                                <td><i class="fa-solid fa-circle-check"></i></td>
+                                <td><i class="fa-solid fa-circle-check"></i></td>
+                                <td><i class="fa-solid fa-circle-check"></i></td>
+                                <td><i class="fa-solid fa-circle-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Easy Carry Straps</td>
+                                <td><i class="fa-solid fa-circle-check"></i></td>
+                                <td><i class="fa-solid fa-circle-check"></i></td>
+                                <td><i class="fa-solid fa-circle-check"></i></td>
+                                <td><i class="fa-solid fa-circle-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Weight in Pounds (est) </td>
+                                <td>1.15</td>
+                                <td>1.72</td>
+                                <td>1.74</td>
+                                <td>2.3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <button class="sec-5-primary-button">
+                CONTACT US FOR YOUR MOBILE POS SOLUTION
+            </button>
+        </section>
+    </main>
+
+    <main class="sec-5-res">
+        <section id="sec-5-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="section-header" style="color: #ffffff;">
+                            LET’S BUILD YOUR MOBILE POS SOLUTION
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="sec-5-res-wrap">
+                <div class="sec-5-rs-step">
+                    <h3>STEP 1</h3>
+                    <b>BRACKET SELECTION</b>
+                    <p>Begin by determining which of these modules you need.</p>
+                </div>
+            </div>
+
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="sec-5-res-carosel">
+                        <div class="sec-5-res-carosel-image">
+                            <img src="images/module-table-verifone-e285.jpg" alt="">
+                        </div>
+                        <button class="sec-5-res-carosel-button">
+                            VIEW BRACKET
+                        </button>
+                        <span class="sec-5-res-carosel-title">
+                            Verifone e285
+                        </span> 
+                        <div class="sec-5-res-carosel-desc">
+                            <ul>
+                                <li>
+                                    3-in-1 Payment
+                                </li>
+                                <li>
+                                    Bluetooth 4.2 <br>
+                                    Wi-Fi 2.4GHz and 5GHZ
+                                </li>
+                                <li>
+                                    2.8” Color touchscreen
+                                </li>
+                                <li>
+                                    512MB Flash <br>
+                                    512MB DDR
+                                </li>
+                                <li>
+                                    Linux-based
+                                </li>
+                                <li>
+                                    Li-ion/1800mAH <br>
+                                    Replaceable
+                                </li>
+                                <li>
+                                    PCI PTS 5.x
+                                </li>
+                            </ul>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="sec-5-res-carosel">
+                        <div class="sec-5-res-carosel-image">
+                            <img src="images/module-table-ismp4.jpg" alt="">
+                        </div>
+                        <button class="sec-5-res-carosel-button">
+                            VIEW BRACKET
+                        </button>
+                        <span class="sec-5-res-carosel-title">
+                            Ingenico iSMP4
+                        </span> 
+                        <div class="sec-5-res-carosel-desc">
+                            <ul>
+                                <li>
+                                    3-in-1 Payment
+                                </li>
+                                <li>
+                                    Bluetooth Class II <br>
+                                    Wi-Fi
+                                </li>
+                                <li>
+                                    2.81” Color 
+                                </li>
+                                <li>
+                                    128MB Flash <br>
+                                    32MB SDRAM
+                                </li>
+                                <li>
+                                    Telium TETRA
+                                </li>
+                                <li>
+                                    Li-ion/2000mAH <br>
+                                    Removable
+                                </li>
+                                <li>
+                                    PCI PTS 5.x <br>
+                                    Multiple P2PE schemes
+                                </li>
+                            </ul>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="sec-5-res-carosel">
+                        <div class="sec-5-res-carosel-image">
+                            <img src="images/module-table-2500.jpg" alt="">
+                        </div>
+                        <button class="sec-5-res-carosel-button">
+                            VIEW BRACKET
+                        </button>
+                        <span class="sec-5-res-carosel-title">
+                            Ingenico Link/2500
+                        </span> 
+                        <div class="sec-5-res-carosel-desc">
+                            <ul>
+                                <li>
+                                    3-in-1 Payment
+                                </li>
+                                <li>
+                                    Bluetooth Class II <br>
+                                    Wi-Fi (Dual band)
+                                </li>
+                                <li>
+                                    2.4” Color
+                                </li>
+                                <li>
+                                    256MB Flash <br>
+                                    128MB RAM
+                                </li>
+                                <li>
+                                    Telium TETRA
+                                </li>
+                                <li>
+                                    Li-ion/600mAH
+                                </li>
+                                <li>
+                                    PCI PTS v5.x <br>
+                                    Online & offline certified
+                                </li>
+                            </ul>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="sec-5-res-carosel">
+                        <div class="sec-5-res-carosel-image">
+                            <img src="images/module-table-2500i.jpg" alt="">
+                        </div>
+                        <button class="sec-5-res-carosel-button">
+                            VIEW BRACKET
+                        </button>
+                        <span class="sec-5-res-carosel-title">
+                            Ingenico Link/2500i
+                        </span> 
+                        <div class="sec-5-res-carosel-desc">
+                            <ul>
+                                <li>
+                                    3-in-1 Payment
+                                </li>
+                                <li>
+                                    Bluetooth 4.2 Class B
+                                </li>
+                                <li>
+                                    2.4” Color
+                                </li>
+                                <li>
+                                    256MB Flash <br>
+                                    128MB RAM
+                                </li>
+                                <li>
+                                    Telium TETRA
+                                </li>
+                                <li>
+                                    Li-ion/1200mAH <br>
+                                    Removable
+                                </li>
+                                <li>
+                                    PCI PTS v5.x <br>
+                                    Online & offline certified
+                                </li>
+                            </ul>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="background: #FF9600;">
+            <div class="sec-5-res-wrap">
+                <div class="sec-5-rs-step">
+                    <h3 style="color: #fff;">STEP 2</h3>
+                    <b style="color: #fff;">BARCODE SCANNER</b>
+                    <p style="color: #fff;">
+                        Do you need to be able to scan
+                        barcodes as part of your
+                        mobile POS solution?
+                    </p>
+                    <ol>
+                        <li>
+                            Enables large appliance and
+                            furniture showrooms to quickly access inventory data
+                        </li>
+                        <li>
+                            Provides shoppers with instantaneous data speeds
+                        </li>
+                    </ol>                    
+                </div>
+            </div>
+        </div>
+        <div class="sec-5-rs-step-bg-image">
+            <img src="images/step-2-image.jpg" alt="">
+        </div>
+        <div class="container">
+            <div class="sec-5-res-wrap">
+                <div class="sec-5-rs-step">
+                    <h3>STEP 3</h3>
+                    <b>RUGGED DEVICE</b>
+                    <p>
+                        Choose between several Surface
+                        xCase or Bundled solutions
+                        and the lightweight, rugged
+                        T1190 tablet.
+                    </p>
+                </div>
+            </div>
+
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="sec-5-res-carosel">
+                        <div class="sec-5-res-carosel-image">
+                            <img src="images/tablet-table-surface-go.jpg" alt="">
+                        </div>
+                        <span class="sec-5-res-carosel-title">
+                            Surface Go
+                        </span> 
+                        <div class="sec-5-res-carosel-desc">
+                            <ul>
+                                <li>
+                                    Proven Rugged
+                                </li>
+                                <li>
+                                    Optional Barcode Scanner
+                                </li>
+                                <li>
+                                    Screen Size 10.0”
+                                </li>
+                                <li>
+                                    Mountable
+                                </li>
+                                <li>
+                                    Easy Carry Straps
+                                </li>
+                                <li>
+                                    1.15 Weight in Pounds (est)
+                                </li>
+                            </ul>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="sec-5-res-carosel">
+                        <div class="sec-5-res-carosel-image">
+                            <img src="images/tablet-table-surface-pro.jpg" alt="">
+                        </div>
+                        <span class="sec-5-res-carosel-title">
+                            Surface Pro 7+
+                        </span> 
+                        <div class="sec-5-res-carosel-desc">
+                            <ul>
+                                <li>
+                                    Proven Rugged
+                                </li>
+                                <li>
+                                    Optional Barcode Scanner
+                                </li>
+                                <li>
+                                    12.3” Screen Size 
+                                </li>
+                                <li>
+                                    Mountable
+                                </li>
+                                <li>
+                                    Easy Carry Straps
+                                </li>
+                                <li>
+                                    1.72 Weight in Pounds (est)
+                                </li>
+                            </ul>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="sec-5-res-carosel">
+                        <div class="sec-5-res-carosel-image">
+                            <img src="images/tablet-table-surface-pro8.jpg" alt="">
+                        </div>
+                        <span class="sec-5-res-carosel-title">
+                            Surface Pro 8
+                        </span> 
+                        <div class="sec-5-res-carosel-desc">
+                            <ul>
+                                <li>
+                                    Proven Rugged
+                                </li>
+                                <li>
+                                    No optional Barcode Scanner
+                                </li>
+                                <li>
+                                    13.0” Screen Size
+                                </li>
+                                <li>
+                                    Mountable
+                                </li>
+                                <li>
+                                    Easy Carry Straps
+                                </li>
+                                <li>
+                                    1.74 Weight in Pounds (est)
+                                </li>
+                            </ul>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="sec-5-res-carosel">
+                        <div class="sec-5-res-carosel-image">
+                            <img src="images/tablet-table-t1190.jpg" alt="">
+                        </div>
+                        <span class="sec-5-res-carosel-title">
+                            xTablet T1190
+                        </span> 
+                        <div class="sec-5-res-carosel-desc">
+                            <ul>
+                                <li>
+                                    Proven Rugged
+                                </li>
+                                <li>
+                                    Optional Barcode Scanner
+                                </li>
+                                <li>
+                                    10.1” Screen Size
+                                </li>
+                                <li>
+                                    Mountable
+                                </li>
+                                <li>
+                                    Easy Carry Straps
+                                </li>
+                                <li>
+                                    Li-ion/1200mAH <br>
+                                    Removable
+                                </li>
+                                <li>
+                                    2.3 Weight in Pounds (est)
+                                </li>
+                            </ul>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="sec-5-res-pri-btn">
+            CONTACT US FOR YOUR MOBILE POS SOLUTION 
+        </button>
+    </main>
+
+
+    <!-- SECTION 6 -->
+    <section id="sec-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="section-header" style="font-size: 45px;">
+                        LEARN MORE
+                    </h3>
+                    <span class="section-sub">
+                        PRESS RELEASES | BLOG ARTICLES | VIDEOS
+                    </span>
+                </div>
+            </div>
+            <div class="sec-6-bottom">
+                <div class="row">
+                    <div class="col-md-6 custom-border">
+                        <div class="sec-6-wrap">
+                            <div class="sec-6-white-paper"></div>
+                            <span class="sec-6-span-f-child">
+                                Mobile POS White Paper
+                            </span>
+                            <span class="sec-6-span-l-child">
+                                POSted on XX/XX/XXXX
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="sec-6-wrap">
+                            <div class="sec-6-white-paper"></div>
+                            <span class="sec-6-span-f-child">
+                                Another White Paper
+                            </span>
+                            <span class="sec-6-span-l-child">
+                                POSted on XX/XX/XXXX
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <section class="footer-area">
+            <div class="container">
+                <div class="row flex-box">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="d-flex">
+                            <div class="footer-logo">
+                                <div class="brand-f-logo">
+                                    <a href=""><img src="images/MobileDemand-logo.png" alt=""></a>
+
+                                </div>
+                                <div class="social-icons">
+                                    <ul>
+                                        <li>
+                                            <a href="">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i class="fa-brands fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i class="fa-brands fa-pinterest-p"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-title">
+                                <h5>help</h5>
+                                <ul class="">
+                                    <li><a href="">Contact Us</a></li>
+                                    <li><a href="">Service Request</a></li>
+                                    <li><a href="">Warranty Info</a></li>
+                                    <li><a href="">Drivers & Downloads</a></li>
+                                    <li><a href="">Terms and Conditions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                        <div class="d-flex">
+                            <div class="footer-title">
+                                <h5>OUR PRODUCTS</h5>
+                                <ul>
+                                    <li><a href=""> Sales and Savings</a></li>
+                                    <li><a href="">Mounts and Accessories</a></li>
+                                    <li><a href="">Entry-Level Rugged Tablets</a></li>
+                                    <li><a href="">Value-Performance Rugged Tablets </a></li>
+                                    <li><a href="">Mid-Performance Rugged Tablets </a></li>
+                                    <li><a href="">High Performance & Productivity </a></li>
+                                    <li><a href="">Rugged Case - iPad </a></li>
+                                    <li><a href="">Rugged Case - Microsoft Surface </a></li>
+                                    <li><a href=""> Rugged Microsoft Surface Bundles </a></li>
+                                </ul>
+                            </div>
+
+                            <div class="footer-title">
+                                <h5>RESOURCES</h5>
+                                <ul>
+                                    <li><a href=""> Success Stories</a></li>
+                                    <li><a href=""> FAQ</a></li>
+                                    <li><a href=""> Patents</a></li>
+                                    <li><a href="">Testimonials</a></li>
+                                    <li><a href=""> Industries </a></li>
+                                    <li><a href=""> Partner Directory </a></li>
+                                    <li><a href="">About MobileDemand</a></li>
+                                    <li><a href=""> Careers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                        <div class="d-flex">
+                            <div class="footer-title">
+                                <h5>LEGAL</h5>
+                            </div>
+
+                            <div class="mail-input">
+                                <h5>EMAIL SIGN UP</h5>
+                                <div class="input-box">
+                                    <input type="email" placeholder="username@domain.com">
+                                </div>
+                                <div class="mail-button">
+                                    <button>Sign UP</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="footer-copy-right" style="background: #626262;">
+            <div class="container">
+                <div class="copy-right">
+                    <p>© 2020 MobileDemand, L.C. | 1501 Boyson Square Drive, Suite 101, Hiawatha, IA 52233 |
+                        319.363.4121 All Rights Reserved. | Legal</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        $('#res-menu-icon').click(() => {
+            $('.res-nav').css('transform', 'translateX(0)')
+            $('.back-drop').css('display', 'block')
+            $('.res-nav-close').css('left', '82%')
+        })
+
+        $('.res-nav-close').click(() => {
+            $('.res-nav').css('transform', 'translateX(-3500px)')
+            $('.back-drop').css('display', 'none')
+            $('.res-nav-close').css('left', '-100px')
+        })
+
+        $('.back-drop').click(() => {
+            $('.res-nav').css('transform', 'translateX(-1000px)')
+            $('.back-drop').css('display', 'none')
+            $('.res-nav-close').css('left', '-100px')
+        })
+
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel();
+        });
+    </script>
 </body>
+
 </html>
